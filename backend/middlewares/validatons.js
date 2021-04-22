@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable max-len, object-curly-spacing */
 const { celebrate, Joi } = require('celebrate');
 const { ObjectId } = require('mongoose').Types;
 const validator = require('validator');
@@ -26,7 +26,7 @@ const validateCreateUser = celebrate({
     name: Joi.string().min(2).max(30),
     about: Joi.string().min(2).max(30),
     avatar: Joi.string().custom((value, helpers) => {
-      if (validator.isURL(value)) {
+      if (validator.isURL(value, {require_protocol: true})) {
         return value;
       }
       return helpers.message('Невалидная ссылка');
@@ -75,7 +75,7 @@ const validateUserById = celebrate({
 const validateUpdateAvatar = celebrate({
   body: Joi.object().keys({
     avatar: Joi.string().required().custom((value, helpers) => {
-      if (validator.isURL(value)) {
+      if (validator.isURL(value, {require_protocol: true})) {
         return value;
       }
       return helpers.message('Невалидная ссылка');
@@ -103,7 +103,7 @@ const validateCreateCard = celebrate({
   body: Joi.object().keys({
     name: Joi.string().min(2).max(30).required(),
     link: Joi.string().required().custom((value, helpers) => {
-      if (validator.isURL(value)) {
+      if (validator.isURL(value, {require_protocol: true})) {
         return value;
       }
       return helpers.message('Невалидная ссылка');
