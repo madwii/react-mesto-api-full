@@ -1,0 +1,9 @@
+.popup__image-zoom {
+    max-width: 75vw;
+    max-height: 75vw;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}

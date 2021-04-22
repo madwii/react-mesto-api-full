@@ -1,0 +1,18 @@
+.header__navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__navigation {
+      padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__navigation {
+    margin-top: 15px;
+    padding-right: 30px;
+  }
+}

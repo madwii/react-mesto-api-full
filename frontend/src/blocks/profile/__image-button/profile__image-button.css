@@ -1,0 +1,19 @@
+.profile__image-button {
+    background-image: url('../../../images/pen_change.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px 26px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.profile__image-button:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+}

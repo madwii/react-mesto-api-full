@@ -1,0 +1,25 @@
+.auth__signin {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    align-items: center;
+    justify-content: center;
+    margin: 15px auto 0;
+    display: flex;
+  }
+  
+  .auth__signin p {
+    margin: 0;
+    color: #FFFFFF;
+  }
+  
+  .auth__signin a {
+    text-decoration: none;
+    color: #FFFFFF;
+    margin-left: 5px;
+  }
+  
+  .auth__signin a:hover {
+    opacity: 0.6;
+  }
+  
