@@ -18,7 +18,6 @@ router.use(auth);
 router.use('/', userRouter);
 router.use('/', cardRouter);
 
-// нашел только здесь. О ней же речь? И спасибо за ревью;)
 router.use('/*', (req, res) => {
   throw new NotFoundError('Cервер не может найти запрашиваемый ресурс');
 });
